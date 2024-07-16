@@ -1,0 +1,88 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Landing page
+        link(href="../css/style.css" rel="stylesheet")
+    body(class="page")
+        header(class="header") 
+            div(class="header__logo")
+                a(href="#")
+                    img(src="../img/Logo.svg", alt="Логотип")
+            nav(class="main-nav")
+                ul(class="site-nav")
+                    li(class="site-nav__item")
+                        a(class="site-nav__link" href="#") О нас
+                    li(class="site-nav__item site-nav__item-with-submenu") 
+                        a(class="site-nav__link" href="#") Услуги
+                    li(class="site-nav__item") 
+                        a(class="site-nav__link" href="#") Вакансии
+                    li(class="site-nav__item") 
+                        a(class="site-nav__link" href="#") Новости
+                    li(class="site-nav__item site-nav__item-with-submenu") 
+                        a(class="site-nav__link" href="#") Соглашения
+                    li(class="site-nav__item")
+                        a(class="log-btn" href="#") Войти
+                    li(class="site-nav__item")
+                        a(class="signin-btn" href="#") Зарегистрироваться
+        main(class="main-section")
+            div(class="input-container")
+            p(class="main-section__text") Лучшие номера для вашей работы, отдыха и просто вдохновения
+        footer(class="footer")
+            div(class="footer__main")
+                div(class="footer__container")
+                    div(class="footer__description")
+                        a(class="footer__logo" href="#")
+                            img(src="../img/Logo.svg", alt="Логотип")
+                        p(class="footer__info") Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                    nav(class="footer__nav")
+                        ul(class="footer__list")
+                            h3(class="footer__title") Навигация
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") О нас
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") Новости
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") Служба поддержки
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") Услуги
+                        ul(class="footer__list")
+                            h3(class="footer__title") О нас
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") О сервисе
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") Наша команда
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") Вакансии
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") Инвесторы
+                        ul(class="footer__list")
+                            h3(class="footer__title") Служба поддержки
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") Соглашения
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") Сообщества
+                            li(class="footer__list-item")
+                                a(class="footer__list-link") Связь с нами
+                    form(class="footer__subscription")
+                        h3(class="footer__title") Подписка
+                        p(class="footer-info") Получайте специальные предложения и новости сервиса
+                        div(class="footer__input-subscription")
+                            div(class="field")
+                                div(class="field__wrapper")
+                                    input(class="field__input" type="email" name="email" placeholder="Email")
+            div(class="footer__sub")
+                div(class="footer__sub-container")
+                    p(class="copyright") Copyright © 2018 Toxin отель. Все права защищены.
+                    nav(class="footer__social-container")
+                        ul(class="footer__social-list")
+                            li(class="footer__social-item")
+                                a(class="footer__social-link" href="#")
+                                    img( class="footer__social-icon" src="../img/twitter.svg", alt="Twitter")
+                            li(class="footer__social-item")
+                                a(class="footer__social-link" href="#")
+                                    img( class="footer__social-icon" src="../img/facebook.svg", alt="Facebook")
+                            li(class="footer__social-item")
+                                a(class="footer__social-link" href="#")
+                                    img( class="footer__social-icon" src="../img/insta.svg", alt="Instagram")
