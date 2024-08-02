@@ -16,7 +16,45 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 
+/*@font-face {
+    font-family: 'Material Icons';
+    src: url(fonts/MaterialIcons-Regular.ttf) format('truetype');
+}*/
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(MaterialIcons-Regular.woff2) format('woff2'),
+        url(MaterialIcons-Regular.woff) format('woff'),
+        url(MaterialIcons-Regular.ttf) format('truetype');
+}
 
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 
 @font-face {
     font-family: 'Montserrat';
@@ -50,29 +88,42 @@ body {
     min-width: 320px;
     
 }
+//стили хедера
+header {
+    box-shadow: 0px 10px 20px 0px rgba(31, 32, 65, 0.05);
 
-.header{
+}
+.header__container{
+    max-width: 1190px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 10px 20px;
-    .header__logo img {
+    &.header__logo img {
         width: 100px;
         height: auto;
     }
 }
 
+.site-nav__item {
+    display: inline-block;
+}
+
+.site-nav__item-with-submenu >.site-nav__link::after {
+    content: url(../img/expand_more.svg);
+    padding-left: 9px;
+}
 
 
-a.site-nav__link {
+a.site-nav__link:not(.btn) {
     color: rgba(31, 32, 65, 0.5);
     line-height: 17.07px;
 }
 
-.main-nav ul {
+.main-nav {
     display: flex;
-
 }
 
 .main-nav ul li {
@@ -83,16 +134,17 @@ a.site-nav__link {
     margin-right: 0;
 }
 
-
-a.log-btn {
-    display: inline-block;
-    font-size: 12px;
-    line-height: 14.63px;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    
+.site-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 
+
+.user__nav {
+    display: flex;
+    align-items: center;
+}
 //стили главной части сайта
 
 .main-section {
@@ -111,9 +163,6 @@ a.log-btn {
         
     }
 }
-
-
-
 
 
 //Стили футера

@@ -5,29 +5,36 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Landing page
         link(href="../css/style.css" rel="stylesheet")
+        link(rel="stylesheet", href="../material-design-icons-3.0.2/iconfont/material-icons.css")
     body(class="page")
         header(class="header") 
-            div(class="header__logo")
-                a(href="#")
+            div(class="header__container")
+                a(class="header__logo" href="#")
                     img(src="../img/Logo.svg", alt="Логотип")
-            nav(class="main-nav")
-                ul(class="site-nav")
-                    li(class="site-nav__item")
-                        a(class="site-nav__link" href="#") О нас
-                    li(class="site-nav__item site-nav__item-with-submenu") 
-                        a(class="site-nav__link" href="#") Услуги
-                    li(class="site-nav__item") 
-                        a(class="site-nav__link" href="#") Вакансии
-                    li(class="site-nav__item") 
-                        a(class="site-nav__link" href="#") Новости
-                    li(class="site-nav__item site-nav__item-with-submenu") 
-                        a(class="site-nav__link" href="#") Соглашения
-                    li(class="site-nav__item")
-                        a(class="log-btn" href="#") Войти
-                    li(class="site-nav__item")
-                        a(class="signin-btn" href="#") Зарегистрироваться
+                nav(class="main-nav")
+                    ul(class="site-nav")
+                        li(class="site-nav__item")
+                            a(class="site-nav__link" href="#") О нас
+                        li(class="site-nav__item site-nav__item-with-submenu") 
+                            a(class="site-nav__link" href="#") Услуги
+                        li(class="site-nav__item") 
+                            a(class="site-nav__link" href="#") Вакансии
+                        li(class="site-nav__item") 
+                            a(class="site-nav__link" href="#") Новости
+                        li(class="site-nav__item site-nav__item-with-submenu") 
+                            a(class="site-nav__link" href="#") Соглашения
+                    ul(class="user__nav")
+                        li(class="site-nav__item")
+                            a(class="btn" href="#") Войти
+                        li(class="site-nav__item")
+                            a(class="btn btn-gradient" href="#") Зарегистрироваться
         main(class="main-section")
             div(class="input-container")
+                div(class="room-search")
+                    h1(class="room-search__title") Найдем номера под ваши пожелания
+                    form(class="room-search__form" action="https://echo.htmlacademy.ru/courses", method="post")
+                        div(class="search-room__item search-room-item-calendar")
+                            div(class="search-room__grop-field")
             p(class="main-section__text") Лучшие номера для вашей работы, отдыха и просто вдохновения
         footer(class="footer")
             div(class="footer__main")
@@ -68,6 +75,7 @@ html(lang="ru")
                     form(class="footer__subscription")
                         h3(class="footer__title") Подписка
                         p(class="footer-info") Получайте специальные предложения и новости сервиса
+                            i(class="material-icons") menu language face 
                         div(class="footer__input-subscription")
                             div(class="field")
                                 div(class="field__wrapper")

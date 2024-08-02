@@ -7,6 +7,8 @@
 }
 
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -80,14 +82,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: url(MaterialIcons-Regular.eot);
+  /* For IE6-8 */
   src: local("Material Icons"), local("MaterialIcons-Regular"), url(MaterialIcons-Regular.woff2) format("woff2"), url(MaterialIcons-Regular.woff) format("woff"), url(MaterialIcons-Regular.ttf) format("truetype");
 }
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px; /* Preferred icon size */
+  font-size: 24px;
+  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -127,7 +131,7 @@ body {
   font-weight: 400;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   max-width: 1920px;
   min-width: 320px;
 }
@@ -250,7 +254,7 @@ a.site-nav__link:not(.btn) {
 
 .footer__title {
   text-transform: uppercase;
-  color: rgb(31, 32, 65);
+  color: #1f2041;
   font-size: 12px;
   line-height: 14.63px;
   font-weight: 700;
