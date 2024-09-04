@@ -1,0 +1,146 @@
+body {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  min-height: 100%;
+}
+
+.ui-container__logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 48px;
+  height: 48px;
+  background-image: url("../img/ui_logo.svg");
+}
+
+.colors-type {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 149px 158px 149px 149.74px;
+}
+
+.colors-type__left-column {
+  width: 281.26px;
+  height: 610px;
+}
+
+.colors-type__item {
+  margin-bottom: 20px;
+}
+
+.color-segment {
+  display: flex;
+  align-items: center;
+}
+
+.color-segment__brick {
+  width: 70px;
+  height: 70px;
+  margin-right: 40px;
+  border-radius: 6px;
+}
+
+.color-segment__brick_dark-shade-full {
+  background-color: rgba(31, 32, 65, 1);
+}
+
+.color-segment__brick_dark-shade-three-fourth {
+  background-color: rgba(31, 32, 65, 0.75);
+}
+
+.color-segment__brick_dark-shade-half {
+  background-color: rgba(31, 32, 65, 0.5);
+}
+
+.color-segment__brick_dark-shade-one-fourth {
+  background-color: rgba(31, 32, 65, 0.25);
+}
+
+.color-segment__brick_dark-shade-min {
+  background-color: rgba(31, 32, 65, 0.05);
+}
+
+.color-segment__brick_purple {
+  background-color: rgba(188, 156, 255, 1);
+}
+
+.color-segment__brick_green {
+  background-color: rgba(111, 207, 151, 1);
+}
+
+.color-segment__description {
+  line-height: 27.79px;
+  font-size: 19px;
+  color: rgba(31, 32, 65, 1);
+
+}
+
+.color-segment__title-color {
+  display: block;
+  font-weight: bold;
+}
+
+.color-segment__hex-color {
+  display: block;
+}
+
+.colors-type__right-column {
+  width: 436px;
+}
+
+.colors-type__right-column-item {
+  
+  margin-bottom: 51px;
+}
+
+.description-block {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.description-block__title_large {
+  font-size: 24px;
+  line-height: 29.26px;
+}
+
+.description-block__specification_large {
+  width: 369px;
+  color: rgba(31, 32, 65, 1);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29.26px;
+}
+
+.description-block__title_medium {
+  font-size: 19px;
+  line-height: 23.16px;
+}
+
+.description-block__specification_medium {
+  width: 369px;
+  color: rgba(31, 32, 65, 1);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23.16px;
+}
+
+.description-block__title_small {
+  font-size: 12px;
+  line-height: 14.63px;
+}
+
+.description-block__specification_small {
+  width: 369px;
+  color: rgba(31, 32, 65, 1);
+  font-size: 12px;
+  line-height: 14.63px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.description-block__specification_regular {
+  width: 369px;
+  color: rgba(31, 32, 65, 1);
+}
