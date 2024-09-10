@@ -1,0 +1,103 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Form elements
+        link(href="../css/style.css" rel="stylesheet")
+        link(href="../css/elements-style.css" rel="stylesheet")
+    body
+        div(class="ui-container")
+            div(class="ui-container__logo")
+        div(class="form-elements")
+            div(class="form-elements__left-block")
+                div(class="form-elements-kit")
+                    div(class="form-elements_kit__titles")
+                        span(class="form-elements-kit__main-title") text field
+                        span(class="form-elements-kit__description") default
+                    div(class="form-elements-kit__element")
+                        label(class="text-input email-input" for="email")
+                            input(class="text-input__field text-input__bordered-field" type="email" name="email1" id="email" placeholder="Email")
+                    div(class="form-elements_kit__titles")
+                        span(class="form-elements-kit__main-title") dropdown
+                    div(class="form-elements-kit__element")
+                        label(class="text-input email-input" for="guests")
+                            input(class="text-input__field text-input__bordered-field" name="guests" id="guests" autocomplete="off" value="Сколько гостей" readonly="")
+                    div(class="form-elements_kit__titles")
+                        span(class="form-elements-kit__main-title") masked text field
+                    div(class="form-elements-kit__element")
+                        label(class="text-input email-input" for="masked-field")
+                            input(class="text-input__field text-input__bordered-field" type="text" name="masked" id="masked-field" autocomplete="off" value="ДД.ММ.ГГГГ" readonly="readonly")
+                    div(class="form-elements-kit__element form-elements-kit__element-date-pickers")
+                        div(class="form-element-kit__wrapper")
+                            div(class="form-elements_kit__titles")
+                                span(class="form-elements-kit__main-title") date dropdown
+                            div(class="form-elements-kit__element")
+                                label(class="text-input date-picker-input" for="date_picker1")
+                                input(class="text-input__field text-input__bordered-field" type="text" name="arriving" id="date_picker1" autocomplete="off" value="ДД.ММ.ГГГГ" readonly="readonly")
+                        div(class="form-element-kit__wrapper")
+                            div(class="form-elements_kit__titles")
+                                span(class="form-elements-kit__main-title") date dropdown
+                            div(class="form-elements-kit__element")
+                                label(class="text-input date-picker-input" for="date_picker1")
+                                input(class="text-input__field text-input__bordered-field" type="text" name="arriving" id="date_picker2" autocomplete="off" value="ДД.ММ.ГГГГ" readonly="readonly")
+                    div(class="form-elements_kit__titles")
+                        span(class="form-elements-kit__main-title") filter date dropdown
+                    div(class="form-elements-kit__element")
+                        label(class="text-input filter-date-input" for="filter_date")
+                        input(class="text-input__field text-input__bordered-field" type="text" name="filter_date" id="filter_date" placeholder="Выберите даты")
+                    div(class="form-elements_kit__titles")
+                        span(class="form-elements-kit__main-title") subscription text field
+                    div(class="form-elements-kit__element")
+                        label(class="text-input email-input" for="email2")
+                            input(class="text-input__field text-input__bordered-field" type="email" name="email2" id="email2" placeholder="Email")
+                    div(class="form-elements_kit__titles")
+                        span(class="form-elements-kit__main-title") dropdown
+                        span(class="form-elements-kit__description") default
+                    div(class="form-elements-kit__element")
+                        label(class="text-input amenities-input" for="amenities1")
+                        input(class="text-input__field text-input__bordered-field" type="text" name="email" id="amenities1" placeholder="Выберите удобства")
+                    div(class="form-elements_kit__titles")
+                        span(class="form-elements-kit__main-title") dropdown
+                        span(class="form-elements-kit__description") expand
+                    div(class="form-elements-kit__element")
+                        label(class="text-input amenities-input" for="amenities2")
+                        input(class="text-input__field text-input__bordered-field" type="text" name="email" id="amenities2" placeholder="Выберите удобства")
+                    div(class="checkbox-list")
+                        div(class="checkbox-list__naming")
+                            span(class="checkbox-list__title") expandable checkbox list
+                        div(class="checkbox-list__menu")
+                            label(class="checkbox-list__inner")
+                                input(class="checkbox-list__item" type="checkbox")
+                                span(class="checkbox-list__name") Завтрак
+                            label(class="checkbox-list__inner")
+                                input(class="checkbox-list__item checkbox-list__item_checked" type="checkbox" )
+                                span(class="checkbox-list__name") Письменный стол
+                            label(class="checkbox-list__inner")
+                                input(class="checkbox-list__item" type="checkbox")
+                                span(class="checkbox-list__name checkbox-list__item_checked") Стул для кормления
+                            label(class="checkbox-list__inner")
+                                input(class="checkbox-list__item checkbox-list__item_checked" type="checkbox")
+                                span(class="checkbox-list__name") Кроватка
+                            label(class="checkbox-list__inner")
+                                input(class="checkbox-list__item" type="checkbox")
+                                span(class="checkbox-list__name") Телевизор
+                            label(class="checkbox-list__inner")
+                                input(class="checkbox-list__item" type="checkbox")
+                                span(class="checkbox-list__name")  Шампунь
+                    div(class="room-amenities-elements")
+                        ul(class="room-amenities-elements__list")
+                            li(class="room-amenities-elements__item")
+                                div(class="room-amenities-elements__icon room-amenities-elements__icon_emoticon")
+                                div(class="room-amenities-elements__notes")
+                                    span(class="room-amenities-elements__title") Комфорт
+                                    span(class="room-amenities-elements__") Шумопогощающие стены
+                                li(class="room-amenities-elements__item")
+                                    div(class="room-amenities-elements__icon room-amenities-elements__icon_location-cty")
+                                    div(class="room-amenities-elements__notes")
+                                        span(class="room-amenities-elements__title") Удобство
+                                        span(class="room-amenities-elements__notes") Окно в каждой из спален
+            div(class="form-elements__middle-block")
+
+
+            div(class="form-elements__right-block")

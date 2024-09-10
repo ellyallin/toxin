@@ -10,9 +10,10 @@ body {
   left: 30px;
   width: 48px;
   height: 48px;
-  background-image: url("../img/ui_logo.svg");
+  background-image: url('../img/ui_logo.svg');
 }
 
+// стили  контейнера страницы
 .colors-type {
   display: flex;
   width: 80%;
@@ -20,6 +21,7 @@ body {
   margin: 149px 158px 149px 149.74px;
 }
 
+// стили левой колонки с цветами
 .colors-type__left-column {
   width: 281.26px;
   height: 610px;
@@ -85,12 +87,14 @@ body {
   display: block;
 }
 
+//стили правой колонки
+
 .colors-type__right-column {
   width: 436px;
 }
 
 .colors-type__right-column-item {
-  
+
   margin-bottom: 51px;
 }
 

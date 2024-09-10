@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -165,7 +165,7 @@ header {
 }
 
 .site-nav__item-with-submenu > .site-nav__link::after {
-  content: url(../img/expand_more.svg);
+  content: url('../img/expand_more.svg');
   padding-left: 9px;
 }
 
@@ -224,7 +224,7 @@ a.site-nav__link:not(.btn) {
 .main-section {
   width: 100%;
   height: 100%;
-  background: url("../img/mainimg.jpg") center/cover no-repeat;
+  background: url('../img/mainimg.jpg') center/cover no-repeat;
   background-origin: border-box;
   background-size: 100% 100%;
 
@@ -279,7 +279,7 @@ label {
   margin-bottom: 20.56px;
 }
 
-input[type="text"] {
+input[type='text'] {
   box-sizing: border-box;
   color: rgba(31, 32, 65, 0.75);
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -289,13 +289,13 @@ input[type="text"] {
   line-height: 18px;
 }
 
-input[value^="ДД.ММ.ГГГГ"] {
-  background: url("../img/expand_more.svg") no-repeat 95% 50%;
+input[value^='ДД.ММ.ГГГГ'] {
+  background: url('../img/expand_more.svg') no-repeat 95% 50%;
   cursor: pointer;
 }
 
-input[value^="Сколько гостей"] {
-  background: url("../img/expand_more.svg") no-repeat 95% 50%;
+input[value^='Сколько гостей'] {
+  background: url('../img/expand_more.svg') no-repeat 95% 50%;
   cursor: pointer;
 }
 
@@ -309,7 +309,7 @@ input[value^="Сколько гостей"] {
 }
 
 .btn_with-arrow::after {
-  content: url("../img/arrow_white.svg");
+  content: url('../img/arrow_white.svg');
   position: relative;
   top: 3px;
   left: 80px;
@@ -400,8 +400,8 @@ a.footer__list-link {
 
 }
 
-input[name^="email"] {
-  background: url("../img/arrow_forward.svg") no-repeat 95% 50%;
+input[name^='email2'] {
+  background: url('../img/arrow_forward.svg') no-repeat 95% 50%;
   cursor: pointer;
 }
 

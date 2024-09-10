@@ -146,7 +146,7 @@ header {
 }
 
 .site-nav__item-with-submenu > .site-nav__link::after {
-  content: url(../img/expand_more.svg);
+  content: url("../img/expand_more.svg");
   padding-left: 9px;
 }
 
@@ -368,7 +368,7 @@ a.footer__list-link {
   color: rgba(31, 32, 65, 0.75);
 }
 
-input[name^=email] {
+input[name^=email2] {
   background: url("../img/arrow_forward.svg") no-repeat 95% 50%;
   cursor: pointer;
 }
