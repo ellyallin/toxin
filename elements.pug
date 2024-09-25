@@ -5,69 +5,85 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Form elements
         link(href="../favicons/fontawesome-free-6.6.0-web/css/all.css" rel="stylesheet")
-        link(href="../css/style.css" rel="stylesheet")
         link(href="../css/elements-style.css" rel="stylesheet")
     body
-        div.ui-container
-            div.ui-container__logo
-        div.form-elements
-            div.form-elements__left-block
-                div.form-elements-kit
-                    div.form-elements_kit__titles
-                        span.form-elements-kit__main-title text field
-                        span.form-elements-kit__description default
-                    div.form-elements-kit__element
-                        label.text-input.email-input(for="email")
-                            input.text-input__field.text-input__bordered-field(type="email" name="email1" id="email" placeholder="Email")
-                    div.form-elements_kit__titles
-                        span.form-elements-kit__main-title dropdown
-                    div.form-elements-kit__element
-                        label.text-input.email-input(for="guests")
-                            input.text-input__field.text-input__bordered-field(type="text" name="guests" id="guests" autocomplete="off" value="Сколько гостей" readonly="")
-                    div.form-elements_kit__titles
-                        span.form-elements-kit__main-title masked text field
-                    div.form-elements-kit__element
-                        label.text-input.email-input(for="masked-field")
-                            input.text-input__field.text-input__bordered-field(type="text" name="masked" id="masked-field" autocomplete="off" value="ДД.ММ.ГГГГ" readonly="readonly")
-                    div.form-elements-kit__element.form-elements-kit__element-date-pickers
-                        div.form-element-kit__wrapper
-                            div.form-elements_kit__titles
-                                span.form-elements-kit__main-title date dropdown
-                            div.form-elements-kit__element
+        .ui-container
+            .ui-container__logo
+        .form-elements
+            .form-elements__left-block
+                .form-elements-kit
+                    .form-elements-kit__container
+                        .form-elements-kit__titles
+                            span.form-elements-kit__title text field
+                            span.form-elements-kit__description default
+                        .form-elements-kit__text-field
+                            label.text-input.email-input(for="email")
+                                input.text-input__field.text-input__bordered-field(type="email" name="email1" id="email" placeholder="Email")
+                    .form-elements-kit__container
+                        .form-elements-kit__titles
+                            h3.form-elements-kit__title text field
+                            span.form-elements-kit__description hover/focus
+                        .form-elements-kit__text-field.text-field_hover-focus
+                            label.text-input.email-input(for="email2")
+                                input.text-input__field.text-input__bordered-field_hovered(type="email" name="email1" id="email2" value="This is pretty awesome")
+                    .form-elements-kit__container
+                        .form-elements-kit__titles
+                            h3.form-elements-kit__title dropdown
+                        .form-elements-kit__dropdown-guests
+                            label.text-input.dropdown-input(for="guests")
+                                input.text-input__field.text-input__bordered-field(type="text" name="guests" id="guests" autocomplete="off" value="Сколько гостей" readonly="")
+                    .form-elements-kit__masked
+                        .form-elements-kit__titles
+                            h3.form-elements-kit__title masked text field
+                        .form-elements-kit__masked-text
+                            label.text-input.email-input(for="masked-field")
+                                input.text-input__field.text-input__bordered-field(type="text" name="masked" id="masked-field" autocomplete="off" placeholder="ДД.ММ.ГГГГ" readonly="readonly")
+                    .form-elements-kit__datepickers
+                        .form-element-kit__wrapper-datepickers
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title date dropdown
+                            .form-elements-kit__date-dropdown
                                 label.text-input.date-picker-input(for="date_picker1")
                                 input.text-input__field.text-input__bordered-field(type="text" name="arriving" id="date_picker1" autocomplete="off" value="ДД.ММ.ГГГГ" readonly="readonly")
-                        div.form-element-kit__wrapper
-                            div.form-elements_kit__titles
-                                span.form-elements-kit__main-title date dropdown
-                            div.form-elements-kit__element
+                        .form-element-kit__wrapper-datepickers
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title date dropdown
+                            .form-elements-kit__date-dropdown
                                 label.text-input.date-picker-input(for="date_picker2")
                                 input.text-input__field.text-input__bordered-field(type="text" name="arriving" id="date_picker2" autocomplete="off" value="ДД.ММ.ГГГГ" readonly="readonly")
-                    div.form-elements_kit__titles
-                        span.form-elements-kit__main-title filter date dropdown
-                    div.form-elements-kit__element
-                        label.text-input.filter-date-input(for="filter_date")
-                        input.text-input__field.text-input__bordered-field(type="text" name="filter_date" id="filter_date" placeholder="Выберите даты")
-                    div.form-elements_kit__titles
-                        span.form-elements-kit__main-title subscription text field
-                    div.form-elements-kit__element
-                        label.text-input.email-input(for="email2")
-                            input.text-input__field.text-input__bordered-field(type="email" name="email2" id="email2" placeholder="Email")
-                    div.form-elements_kit__titles
-                        span.form-elements-kit__main-title dropdown
-                        span.form-elements-kit__description default
-                    div.form-elements-kit__element
-                        label.text-input.amenities-input(for="amenities1")
-                        input.text-input__field.text-input__bordered-field(type="text" name="email" id="amenities1" placeholder="Выберите удобства")
-                    div.form-elements_kit__titles
-                        span.form-elements-kit__main-title dropdown
-                        span.form-elements-kit__description expand
-                    div.form-elements-kit__element
-                        label.text-input.amenities-input(for="amenities2")
-                        input.text-input__field.text-input__bordered-field(type="text" name="email" id="amenities2" placeholder="Выберите удобства")
-                    div.checkbox-list
-                        div.checkbox-list__naming
-                            span.checkbox-list__title expandable checkbox list
-                        div.checkbox-list__menu
+                    .form-elements-kit__filter-date
+                        .form-elements-kit__titles
+                            h3.form-elements-kit__title filter date dropdown
+                        .form-elements-kit__filter
+                            label.text-input.filter-date-input(for="filter_date")
+                            input.text-input__field.text-input__bordered-field(type="text" name="filter_date" id="filter_date" placeholder="Выберите даты")
+                    .form-elements-kit__subsciption-field
+                        .form-elements-kit__titles
+                            h3.form-elements-kit__title subscription text field
+                        .form-elements-kit__email-with-arrow
+                            label.text-input.email-input(for="email3")
+                            input.text-input__field.text-input__bordered-field.text-input_arrowed(type="email" name="email3" id="email3" placeholder="Email")
+                    .form-elements-kit__dropdown-default
+                        .form-elements-kit__titles
+                            h3.form-elements-kit__title dropdown
+                            span.form-elements-kit__description default
+                        .form-elements-kit__dropdown-amenities-default
+                            label.text-input.amenities-input(for="amenities1")
+                            input.text-input__field.text-input__bordered-field(type="text" name="email" id="amenities1" placeholder="2 спальни, 2 кровати...")
+                    .form-elements-kit__dropdown-expanded
+                        .form-elements-kit__titles
+                            h3.form-elements-kit__title dropdown
+                            span.form-elements-kit__description expanded
+                        .form-elements-kit__dropdown-amenities-defoult
+                            label.text-input.amenities-input(for="amenities2")
+                            input.text-input__field.text-input__bordered-field(type="text" name="email" id="amenities2" placeholder="Выберите удобства")
+                    .form-elements-kit__checkbox-list-default
+                        .form-elements-kit__titles
+                            h3.form-elements-kit__title expandable checkbox list
+                    .form-elements-kit__checkbox-list-expanded
+                        .form-elements-kit__titles
+                            h3.form-elements-kit__title expandable checkbox list
+                        .checkbox-list__menu
                             label.checkbox-list__inner
                                 input.checkbox-list__item(type="checkbox")
                                 span.checkbox-list__name Завтрак
@@ -86,209 +102,213 @@ html(lang="ru")
                             label.checkbox-list__inner
                                 input.checkbox-list__item(type="checkbox")
                                 span.checkbox-list__name  Шампунь
-                    div.room-amenities-elements
+                    .room-amenities-elements
                         ul.room-amenities-elements__list
                             li.room-amenities-elements__item
-                                div.room-amenities-elements__icon.room-amenities-elements__icon_emoticon
-                                div.room-amenities-elements__notes
+                                .room-amenities-elements__icon.room-amenities-elements__icon_emoticon
+                                .room-amenities-elements__notes
                                     span.room-amenities-elements__title Комфорт
                                     span.room-amenities-elements__notes Шумопогощающие стены
                             li.room-amenities-elements__item.room-amenities-elements__icon_city
-                                div.room-amenities-elements__icon
-                                div.room-amenities-elements__notes
+                                .room-amenities-elements__icon
+                                .room-amenities-elements__notes
                                     span.room-amenities-elements__title Удобство
                                     span.room-amenities-elements__notes Окно в каждой из спален
-            div.form-elements__middle-block
-                div.form-elements-kit
-                    div.form-elements_kit__titles
-                        span.form-elements_kit__title Checkbox buttons
-                    div.form-elements-kit-checkbox
-                        label.form-elements-kit-checkbox
-                            input.form-elements-kit-checkbox__item(type="checkbox")
-                            span.form-elements-kit-checkbox__name Можно курить
-                    div.form-elements-kit-checkbox
-                        label.form-elements-kit-checkbox
-                            input.form-elements-kit-checkbox__item(type="checkbox")
-                            span.form-elements-kit-checkbox__name Можно с питомцами
-                    div.form-elements-kit-checkbox
-                        label.form-elements-kit-checkbox
-                            input.form-elements-kit-checkbox__item(type="checkbox")
-                            span.form-elements-kit-checkbox__name Можно пригласить гостей (до 10 человек)
-                div.form-elements-kit
-                    div.form-elements-kit__titles
-                        span.form-elements-kit__title Radio buttons
-                    div.radio-buttons
-                        label.radio-buttons__label
-                            input.radio-buttons__button.radio-buttons__button_colored(type="radio" value="Мужчина" name="radio" checked="checked")
-                            span.radio-buttons__text Мужчина
-                        label.radio-buttons__label
-                            input.radio-buttons__button.radio-buttons__button_defoult(type="radio" value="Женщина" name="radio")
-                            span.radio-buttons__text Женщина
-                div.form-elements-kit
-                    div.form-elements-kit__titles
-                        span.form-elements-kit__title Toggle
-                    div.toggles
-                        label.toggles__label
-                            input.toggles__button.toggles__button_colored(type="checkbox" name="toggle" checked="checked")
-                            span.toggle__button_title Получать спецпредложение
-                        label.toggles__label
-                            input.toggles__button.toggles__button_colored(type="checkbox" name="toggle" checked="checked")
-                            span.toggle__button_title Получать спецпредложение
-                div.form-elements-kit
-                    div.form-elements-kit__titles
-                        span.form-elements-kit__title Like buttons
-                    div.likes-buttons
-                        button.like-buttons__button(type="button")
-                            span.like-buttons__heart
-                            span.like-buttons__number 2
-                        div.likes-buttons
-                            button.like-buttons__button(type="button")
-                                span.like-buttons__heart
-                                span.like-buttons__number 11
-                div.form-elements-kit
-                    div.form-elements-kit__titles
-                        span.form-elements-kit__title Rate buttons
-                    div.rate-buttons
-                        div.rate-buttons__stars
-                            a.rate-buttons__star_rate4(href="#")
-                                span.fa-sharp.fa-solid.fa-star
-                                span.fa-sharp.fa-solid.fa-star
-                                span.fa-sharp.fa-solid.fa-star
-                                span.fa-sharp.fa-solid.fa-star
-                                span.fa-sharp.fa-regular.fa-star
-                            a.rate-buttons__star_rate5(href="#")
-                                span.fa-sharp.fa-solid.fa-star
-                                span.fa-sharp.fa-solid.fa-star
-                                span.fa-sharp.fa-solid.fa-star
-                                span.fa-sharp.fa-solid.fa-star
-                                span.fa-sharp.fa-solid.fa-star
-                div.form-elements-kit
-                    div.form-elements-kit__titles
-                        span.form-elements-kit__title Dropdown
-                    div.form-elements-kit__element
-                        div.form-element-kit__dropdown-input
-                            label.text-input.dropdown-input(for="guest_counter")
-                            input.text-input__field.text-input__bordered-field(type="text" name="guests" id="guest_counter" placeholder="Сколько гостей")
-                        div.form-element-kit__dropdown-counter
-                            div.counter-row
-                                span.counter-row-title Взрослые
-                                div.counter-row__counters
-                                    button.counter-row__minus(type="button" disabled="") -
-                                    input.counter-row__number(value="0" readonly="readonly")
-                                    button.counter-row__plus(type="button" disabled="") +
-                                div.counter-row
-                                    span.counter-row-title Дети
-                                    div.counter-row__counters
-                                        button.counter-row__minus(type="button" disabled="") -
-                                        input.counter-row__number( value="0" readonly="readonly")
-                                        button.counter-row__plus(type="button" disabled="") +
-                                div.counter-row
-                                    span.counter-row-title Младенцы
-                                    div.counter-row__counters
-                                        button.counter-row__minus(type="button" disabled="") -
-                                        input.counter-row__number(value="0" readonly="readonly")
-                                        button.counter-row__plus(type="button" disabled="") +
-                div.form-elements-kit
-                    div.form-elements-kit__titles
-                        span.form-elements-kit__title Rich checkbox buttons
-                    div.form-element-kit__element
-                        div.rich-checkbox__button
-                            label.rich-checkbox__container
-                                input.rich-checkbox__button(type="checkbox")
-                                span.rich-checkbox__name Широкий коридор
-                                span.rich-checkbox__description Ширина коридоров в номере не менее 91 см.
-                            label.rich-checkbox__container
-                                input.rich-checkbox__button(type="checkbox")
-                                span.rich-checkbox__name Помощник для инвалидов
-                                span.rich-checkbox__description На 1 этаже вас встретит специалист  и проводит до номера.
-            div.form-elements__right-block
-                div.form-element-kit
-                    div.form-elements_kit__titles
-                        span.form-elements-kit__main-title Range slider
-                    div.range-slider__amounts
-                        span.range-slider__amount_min 5 000₽
-                        span -
-                        span.range-slider__amount_max 10 000₽
-                    div.slider-range__container
-                        label(for="amount")
-                        input(type="text" id="amount" readonly="")
-                div.form-element-kit
-                    div.form-elements_kit__titles
-                        span.form-elements-kit__main-title buttons
-                    div.form-element-kit__buttons
-                        div.form-element-kit__buttons_gradient
-                            button.btn.btn-gradient click me
-                            button.btn.btn-gradient__hover click me
-                        div.form-element-kit__buttons_gradient
-                            button.btn click me
-                            button.btn.btn__hover click me
-                        div.form-element-kit__links
-                            a.icon-link(href="#") click me
-                            a.icon-link__hover(href="#") click me
-                        div.form-element-kit__large-button
-                            button.btn.btn-gradient.btn-gradient_arrow Перейти к оплате
-                            span.icon-button
-                    div.form-element-kit
-                        div.form-elements_kit__titles
-                            span.form-elements-kit__main-title Pagination
-                        div.form-element-kit__pagination
-                            div.pagination-items
-                                a.pagination-items__item(href="#") 1
-                                a.pagination-items__item(href="#") 2
-                                a.pagination-items__item(href="#") 3
-                                a.pagination-items__item(href="#") ...
-                                a.pagination-items__item(href="#") 15
-                                a.pagination-items__item(href="#") ->
-                        div.pagination-description
-                            p.pagination-description__text 1 – 12 из 100+ вариантов аренды
-                    div.form-element-kit
-                        div.form-elements_kit__titles
-                            span.form-elements-kit__title Dropdown
-                                div.form-elements-kit__element
-                                    div.form-element-kit__dropdown-input
-                                        label.text-input.dropdown-input(for="guest_counter2")
-                                        input.text-input__field.text-input__bordered-field(type="text" name="guests" id="guest_counter2" placeholder="3 гостя")
-                                    div.form-element-kit__dropdown-counter
-                                        div.counter-row
-                                            span.counter-row-title Взрослые
-                                            div.counter-row__counters
+            .form-elements__double-block
+                .form-elements__double-block-container
+                    .form-elements__middle-block
+                        .form-elements-kit
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title checkbox buttons
+                            .form-elements-kit-checkbox
+                                label.form-elements-kit-checkbox
+                                    input.form-elements-kit-checkbox__item(type="checkbox")
+                                    span.form-elements-kit-checkbox__name Можно курить
+                            .form-elements-kit-checkbox
+                                label.form-elements-kit-checkbox
+                                    input.form-elements-kit-checkbox__item(type="checkbox")
+                                    span.form-elements-kit-checkbox__name Можно с питомцами
+                            .form-elements-kit-checkbox
+                                label.form-elements-kit-checkbox
+                                    input.form-elements-kit-checkbox__item(type="checkbox")
+                                    span.form-elements-kit-checkbox__name Можно пригласить гостей (до 10 человек)
+                        .form-elements-kit
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title radio buttons
+                            .form-elements-kit__radio-buttons
+                                label.radio-buttons__label
+                                    input.radio-buttons__button.radio-buttons__button_colored(type="radio" value="Мужчина" name="radio" checked="checked")
+                                    span.radio-buttons__text Мужчина
+                                label.radio-buttons__label
+                                    input.radio-buttons__button.radio-buttons__button_defoult(type="radio" value="Женщина" name="radio")
+                                    span.radio-buttons__text Женщина
+                        .form-elements-kit
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title toggle
+                            .form-elements-kit__toggles
+                                label.toggles__label
+                                    input.toggles__button.toggles__button_colored(type="checkbox" name="toggle" checked="checked")
+                                    span.toggle__button_title Получать спецпредложение
+                                label.toggles__label
+                                    input.toggles__button.toggles__button_colored(type="checkbox" name="toggle" checked="checked")
+                                    span.toggle__button_title Получать спецпредложение
+                        .form-elements-kit__likes-button
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title like buttons
+                            .form-elements-kit__likes-buttons
+                                button.like-buttons__button(type="button")
+                                    span.like-buttons__heart
+                                    span.like-buttons__number 2
+                                .likes-buttons
+                                    button.like-buttons__button(type="button")
+                                        span.like-buttons__heart
+                                        span.like-buttons__number 11
+                        .form-elements-kit
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title rate buttons
+                            .form-elements-kit__rate-buttons
+                                .rate-buttons__stars
+                                    a.rate-buttons__star_rate4(href="#")
+                                        span.fa-sharp.fa-solid.fa-star
+                                        span.fa-sharp.fa-solid.fa-star
+                                        span.fa-sharp.fa-solid.fa-star
+                                        span.fa-sharp.fa-solid.fa-star
+                                        span.fa-sharp.fa-regular.fa-star
+                                    a.rate-buttons__star_rate5(href="#")
+                                        span.fa-sharp.fa-solid.fa-star
+                                        span.fa-sharp.fa-solid.fa-star
+                                        span.fa-sharp.fa-solid.fa-star
+                                        span.fa-sharp.fa-solid.fa-star
+                                        span.fa-sharp.fa-solid.fa-star
+                        .form-elements-kit
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title dropdown
+                            .form-elements-kit__dropdown-with-counter
+                                .form-element-kit__dropdown-input
+                                    label.text-input.dropdown-input(for="guest_counter")
+                                    input.text-input__field.text-input__bordered-field(type="text" name="guests" id="guest_counter" placeholder="Сколько гостей")
+                                .form-element-kit__dropdown-counter
+                                    .counter-row
+                                        span.counter-row-title Взрослые
+                                        .counter-row__counters
+                                            button.counter-row__minus(type="button" disabled="") -
+                                            input.counter-row__number(value="0" readonly="readonly")
+                                            button.counter-row__plus(type="button" disabled="") +
+                                        .counter-row
+                                            span.counter-row-title Дети
+                                            .counter-row__counters
                                                 button.counter-row__minus(type="button" disabled="") -
-                                                input.counter-row__number(value="2" readonly="readonly")
+                                                input.counter-row__number( value="0" readonly="readonly")
                                                 button.counter-row__plus(type="button" disabled="") +
-                                            div.counter-row
-                                                span.counter-row-title Дети
-                                                div.counter-row__counters
-                                                    button.counter-row__minus(type="button" disabled="") -
-                                                    input.counter-row__number( value="1" readonly="readonly")
-                                                    button.counter-row__plus(type="button" disabled="") +
-                                            div.counter-row
-                                                span.counter-row-title Младенцы
-                                                div.counter-row__counters
-                                                    button.counter-row__minus(type="button" disabled="") -
-                                                    input.counter-row__number(value="0" readonly="readonly")
-                                                    button.counter-row__plus(type="button" disabled="") +
-                div.form-element-kit
-                    div.form-elements_kit__titles
-                        span.form-elements__title Bullet list
-                    div.form-elements-kit__bullet-list
-                        ul.bullet-list
-                            li.bullet-list__item Нельзя с питомцами
-                            li.bullet-list__item Без вечеринок и мероприятий
-                            li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00
-                div.form-element-kit
-                    div.form-element-kit__comment
-                        div.form-element-kit__user-avatar
+                                        .counter-row
+                                            span.counter-row-title Младенцы
+                                            .counter-row__counters
+                                                button.counter-row__minus(type="button" disabled="") -
+                                                input.counter-row__number(value="0" readonly="readonly")
+                                                button.counter-row__plus(type="button" disabled="") +
+                        .form-elements-kit
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title rich checkbox buttons
+                            .form-element-kit__rich-checkbox
+                                .rich-checkbox__button
+                                    label.rich-checkbox__container
+                                        input.rich-checkbox__button(type="checkbox")
+                                        span.rich-checkbox__name Широкий коридор
+                                        span.rich-checkbox__description Ширина коридоров в номере не менее 91 см.
+                                    label.rich-checkbox__container
+                                        input.rich-checkbox__button(type="checkbox")
+                                        span.rich-checkbox__name Помощник для инвалидов
+                                        span.rich-checkbox__description На 1 этаже вас встретит специалист  и проводит до номера.
+                    .form-elements__right-block
+                        .form-element-kit
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title range slider
+                            .form-elements-kit__range-slider-amounts
+                                span.range-slider__amount_min 5 000₽
+                                span -
+                                span.range-slider__amount_max 10 000₽
+                            .slider-range__container
+                                label(for="amount")
+                                input(type="text" id="amount" readonly="")
+                        .form-element-kit
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title buttons
+                            .form-element-kit__buttons
+                                .form-element-kit__buttons_gradient
+                                    button.btn.btn-gradient click me
+                                    button.btn.btn-gradient__hover click me
+                                .form-element-kit__buttons_gradient
+                                    button.btn click me
+                                    button.btn.btn__hover click me
+                                .form-element-kit__links
+                                    a.icon-link(href="#") click me
+                                    a.icon-link__hover(href="#") click me
+                                .form-element-kit__large-button
+                                    button.btn.btn-gradient.btn-gradient_arrow Перейти к оплате
+                                    span.icon-button
+                            .form-element-kit
+                                .form-elements-kit__titles
+                                    h3.form-elements-kit__title pagination
+                                .form-element-kit__pagination
+                                    .pagination-items
+                                        a.pagination-items__item(href="#") 1
+                                        a.pagination-items__item(href="#") 2
+                                        a.pagination-items__item(href="#") 3
+                                        a.pagination-items__item(href="#") ...
+                                        a.pagination-items__item(href="#") 15
+                                        a.pagination-items__item(href="#") ->
+                                .pagination-description
+                                    p.pagination-description__text 1 – 12 из 100+ вариантов аренды
+                            .form-element-kit
+                                .form-elements-kit__titles
+                                    h3.form-elements-kit__title dropdown
+                                        .form-elements-kit__element
+                                            .form-element-kit__dropdown-with-counter
+                                                label.text-input.dropdown-input(for="guest_counter2")
+                                                input.text-input__field.text-input__bordered-field(type="text" name="guests" id="guest_counter2" placeholder="3 гостя")
+                                            .form-element-kit__dropdown-counter_checked
+                                                .counter-row
+                                                    span.counter-row-title Взрослые
+                                                    .counter-row__counters
+                                                        button.counter-row__minus(type="button" disabled="") -
+                                                        input.counter-row__number(value="2" readonly="readonly")
+                                                        button.counter-row__plus(type="button" disabled="") +
+                                                    .counter-row
+                                                        span.counter-row-title Дети
+                                                        .counter-row__counters
+                                                            button.counter-row__minus(type="button" disabled="") -
+                                                            input.counter-row__number( value="1" readonly="readonly")
+                                                            button.counter-row__plus(type="button" disabled="") +
+                                                    .counter-row
+                                                        span.counter-row-title Младенцы
+                                                        .counter-row__counters
+                                                            button.counter-row__minus(type="button" disabled="") -
+                                                            input.counter-row__number(value="0" readonly="readonly")
+                                                            button.counter-row__plus(type="button" disabled="") +
+                        .form-element-kit
+                            .form-elements-kit__titles
+                                h3.form-elements-kit__title bullet list
+                            .form-elements-kit__bullet-list
+                                ul.bullet-list
+                                    li.bullet-list__item Нельзя с питомцами
+                                    li.bullet-list__item Без вечеринок и мероприятий
+                                    li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00
+                .form-element-kit
+                    .form-element-kit__comment
+                        .form-element-kit__user-avatar
                             img.avatar()
-                        div.likes-buttons
+                        .likes-buttons
                             button.like-buttons__button(type="button")
                                 span.like-buttons__heart
                                 span.like-buttons__number 12
-                        div.comment-container
+                        .comment-container
                             p.comment-container__username Мурат Сарафанов
                             p.comment-container__days 5 дней назад
                             p.comment-cntainer__text
-                                |Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
-                                |И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                                | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
+                                | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+
+
 
 
 

@@ -27,7 +27,6 @@ nav, footer, header, aside {
 html, body {
   height: 100%;
   width: 100%;
-  font-size: 100%;
   line-height: 1;
   font-size: 14px;
   -ms-text-size-adjust: 100%;
@@ -270,7 +269,7 @@ input[value^="Сколько гостей"] {
   width: 260px;
 }
 
-.footer__main {
+Стили футера .footer__main {
   border-top: 1px solid rgba(31, 32, 65, 0.25);
   background-color: #fff;
   padding: 100px 15px;

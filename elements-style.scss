@@ -1,7 +1,106 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Montserrat-Bold.woff') format('woff'),
+  url('Montserrat-Bold.ttf') format('truetype'),
+  url('Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 body {
   display: grid;
   grid-template-columns: auto 1fr auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  background-color: rgba(255, 255, 255, 1);
   min-height: 100%;
+  min-width: 320px;
 }
 
 .ui-container__logo {
@@ -14,11 +113,97 @@ body {
 }
 
 .form-elements {
-  display: flex;
-  justify-content: space-between;
+  @include space-between;
   padding: 140px;
 
 }
+
+.form-elements__left-block,
+.form-elements__right-block,
+.form-elements__middle-block {
+  width: 320px;
+}
+
+
+.form-elements__double-block {
+  @include space-between;
+  flex-direction: column;
+  width: 711px;
+
+}
+
+.form-elements__double-block-container {
+  @include space-between;
+  margin-bottom: 5px;
+
+}
+
+.form-elements-kit__container {
+  margin-bottom: 20px;
+}
+
+.form-elements-kit__titles {
+  @include space-between;
+  font-size: 12px;
+  line-height: 14.63px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.form-elements-kit__title {
+  font-weight: bold;
+  color: rgba(31, 32, 65, 1);
+}
+
+.text-input__field {
+  color: rgba(31, 32, 65, 0.75);
+  padding: 0 15px;
+  height: 42px;
+  border-radius: 4px;
+  width: 100%;
+  line-height: 18px;
+}
+
+.text-input__bordered-field {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.text-input__bordered-field:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.text-input__bordered-field_hovered {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+input[value^='Сколько гостей'] {
+  background: url('../img/expand_more.svg') no-repeat 95% 50%;
+  cursor: pointer;
+}
+
+.form-elements-kit__masked {
+  margin-bottom: 40px;
+}
+
+.form-elements-kit__datepickers {
+  @include space-between;
+  margin-bottom: 40px;
+}
+
+.form-element-kit__wrapper-datepickers {
+  width: 150px;
+
+}
+
+input[name^='arriving'] {
+  background: url('../img/expand_more.svg') no-repeat 90% 50%;
+  cursor: pointer;
+}
+
+.form-elements-kit__filter-date {
+  margin-bottom: 40px;
+}
+
 
 .counter-row__number {
   width: 30px;
